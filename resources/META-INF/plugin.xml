@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>cz.pedry.cucumber.kotlin</id>
+    <name>Cucumber for Kotlin</name>
+    <version>1.0</version>
+    <vendor email="piotr@pedry.cz" url="http://piotr.pedry.cz">Piotr Pedrycz</vendor>
+
+    <depends>gherkin</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <description><![CDATA[
+        Enables navigating from cucumber feature step to Kotlin step definition
+      ]]></description>
+
+    <change-notes><![CDATA[
+        1.0: First working version
+      ]]>
+    </change-notes>
+
+    <idea-version since-build="145.0"/>
+
+    <extensions defaultExtensionNs="org.jetbrains.plugins.cucumber.steps">
+        <cucumberJvmExtensionPoint implementation="cz.pedry.cucumber.kotlin.KotlinCucumberExtension"/>
+    </extensions>
+</idea-plugin>
